@@ -1,0 +1,6 @@
+ insert into Doc_Typ_Prfd_Cntct_Atmpts(Cmpgn_Audnc_Id,Cntct_Atmpt_Nbr,OnBase_Doc_Id,INS_BATCH_ID,UPD_BATCH_ID)
+ select c.Cmpgn_Audnc_Id, d.Atmpt_Number, null,null,null from Doc_Typ_Chnl_Cntct_Atmpt_Ref d
+ inner join Doc_Typ_Cntct_Atmpts_Ref dt on dt.Doc_Typ_Cntct_Atmpts_Ref_Id = d.Doc_Typ_Cntct_Atmpts_Ref_Id
+ inner join Mbr_Cat_Chnl_Pref m on m.Prefnc_Cat_Id= dt.Pref_Cat_Id
+ inner join Cmpgn_Audnc c on c.Mbr_Id= m.Mbr_Id
+
